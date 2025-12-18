@@ -1,0 +1,106 @@
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#eaeaea;
+  background-color: rgb(248, 248, 223);
+  margin:0;
+}
+
+.container{
+  max-width:420px;
+  margin:20px auto;
+  padding:10px;
+}
+
+.input-card{
+  background:#fff;
+  padding:16px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.field{
+  margin-bottom:10px;
+}
+
+.field label{
+  font-size:13px;
+  font-weight:600;
+  display:block;
+  margin-bottom:4px;
+}
+
+.field input,
+.field select{
+  width:100%;
+  padding:9px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.card{
+  background:linear-gradient(135deg,#000,#444);
+  color:#fff;
+  border-radius:14px;
+  padding:15px;
+  margin-top:20px;
+  display:none;
+}
+
+.card-top{
+  text-align:center;
+  font-size:16px;
+}
+
+.card-body{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+  align-items:center;
+}
+
+.card-body img{
+  width:100px;
+  height:100px;
+  background:#fff;
+  padding:6px;
+  border-radius:10px;
+}
+
+.details{
+  font-size:14px;
+}
+
+.note{
+  font-size:12px;
+  opacity:0.8;
+}
+
+.toggle-btn{
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  font-size:14px;
+  margin-left:6px;
+}
+
+/* Mobile Responsive */
+@media(max-width:480px){
+  .card-body{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+

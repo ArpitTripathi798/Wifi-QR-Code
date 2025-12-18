@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WiFi QR Card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styleW.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="input-card">
+    <h3>📶 Wi-Fi QR Card Generator</h3>
+
+    <div class="field">
+      <label>📡 Wi-Fi Name</label>
+      <input type="text" id="ssid" placeholder="Enter network name">
+    </div>
+
+    <div class="field">
+      <label>🔐 Password</label>
+      <input type="text" id="password" placeholder="Enter password">
+    </div>
+
+    <div class="field">
+      <label>🛡 Security</label>
+      <select id="security">
+        <option value="WPA">WPA / WPA2</option>
+        <option value="WEP">WEP</option>
+        <option value="nopass">Open Network</option>
+      </select>
+    </div>
+
+    <button onclick="generate()">Generate Card</button>
+  </div>
+
+  <div class="card" id="card">
+    <div class="card-top">
+      <b>📶 Wi-Fi Access</b>
+    </div>
+
+    <div class="card-body">
+      <img id="qr" crossorigin="anonymous">
+      <div class="details">
+        <p>📡 <b>Network:</b> <span id="showSsid"></span></p>
+
+        <p>
+          🔐 <b>Password:</b>
+          <span id="showPass" data-hidden="true">••••••</span>
+          <button class="toggle-btn" onclick="togglePassword()">👁️</button>
+        </p>
+
+        <p class="note">Scan QR to connect</p>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="downloadPNG()">Download PNG</button>
+
+</div>
+
+<!-- html2canvas CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="scriptW.js"></script>
+</body>
+</html>
+
+
